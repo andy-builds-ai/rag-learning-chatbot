@@ -15,7 +15,8 @@ from langchain_community.vectorstores import FAISS
 INDEX_DIR = "./faiss_index"
 WISSEN_DIR = "wissen"
 STATUS_FILE = "./index_status.json"
-MODEL_NAME = "llama3.2"
+MODEL_NAME = "gemma3:4b"
+EMBEDDING_MODEL = "nomic-embed-text"
 CHUNK_SIZE = 800
 CHUNK_OVERLAP = 100
 RETRIEVER_K = 6
@@ -103,7 +104,7 @@ def ask_question(frage, retriever, llm):
 
 def main():
     llm = OllamaLLM(model=MODEL_NAME)
-    embeddings = OllamaEmbeddings(model=MODEL_NAME)
+    embeddings = OllamaEmbeddings(model=EMBEDDING_MODEL)
 
     documents = load_documents()
     print(f"{len(documents)} documents loaded.")

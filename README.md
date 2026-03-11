@@ -1,30 +1,32 @@
-\# RAG Learning Chatbot
+# RAG Learning Chatbot
 
 
 
-Local AI-powered Q\&A chatbot for studying AI Engineering. Uses Retrieval-Augmented Generation (RAG) to answer questions based on your own knowledge base.
+Local AI-powered Q&A chatbot for studying AI Engineering. Uses Retrieval-Augmented Generation (RAG) to answer questions based on your own knowledge base.
 
 
 
-\## Features
+## Features
 
 
 
-\- Local LLM via Ollama (Llama 3.2 3B) - no API costs, full privacy
+- Local LLM via Ollama (Gemma3 4B) - no API costs, full privacy
 
-\- RAG with FAISS vector search (k=6 retrieval)
+- Dedicated embedding model (nomic-embed-text) for better retrieval quality
 
-\- Knowledge base as simple text files in `wissen/` folder
+- RAG with FAISS vector search (k=6 retrieval)
 
-\- Built-in commands: help, status, neues wissen, exit
+- Knowledge base as simple text files in `wissen/` folder
 
-\- Anti-hallucination prompt - answers only from provided context
+- Built-in commands: help, status, neues wissen, exit
 
-\- Source attribution for every answer
+- Anti-hallucination prompt - answers only from provided context
+
+- Source attribution for every answer
 
 
 
-\## Architecture
+## Architecture
 
 
 
@@ -32,63 +34,64 @@ User Question → FAISS Retriever (k=6) → Context + Prompt → Ollama LLM → 
 
 
 
-\## Tech Stack
+## Tech Stack
 
 
 
-\- Python 3
+- Python 3
 
-\- Ollama + Llama 3.2 3B (local)
+- Ollama + Gemma3 4B (local LLM)
 
-\- LangChain (document loading, text splitting, retrieval)
+- Ollama + nomic-embed-text (local embeddings)
 
-\- FAISS (vector similarity search)
+- LangChain (document loading, text splitting, retrieval)
 
-
-
-\## Setup
+- FAISS (vector similarity search)
 
 
 
-1\. Install Ollama: https://ollama.com
-
-2\. Pull the model: `ollama pull llama3.2`
-
-3\. Install dependencies: `pip install -r requirements.txt`
-
-4\. Run: `python rag\_chatbot\_clean.py`
+## Setup
 
 
 
-\## Adding Knowledge
+1. Install Ollama: https://ollama.com
+
+2. Pull the models: `ollama pull gemma3:4b` and `ollama pull nomic-embed-text`
+
+3. Install dependencies: `pip install -r requirements.txt`
+
+4. Run: `python rag_chatbot_clean.py`
 
 
 
-1\. Add `.txt` files to the `wissen/` folder
-
-2\. Run the chatbot and type `neues wissen` to rebuild the index
+## Adding Knowledge
 
 
 
-\## Current Knowledge Base
+1. Add `.txt` files to the `wissen/` folder
+
+2. Run the chatbot and type `neues wissen` to rebuild the index
 
 
 
-\- AI Engineering fundamentals (Chip Huyen Ch.1)
-
-\- Prompt Engineering (Ch.5)
-
-\- RAG concepts (Ch.6)
-
-\- Python basics
-
-\- RAG architecture concepts
+## Current Knowledge Base
 
 
 
-\## License
+- AI Engineering fundamentals (Chip Huyen Ch.1)
+
+- Prompt Engineering (Ch.5)
+
+- RAG concepts (Ch.6)
+
+- Python basics
+
+- RAG architecture concepts
 
 
 
-GPL-3.0 - see \[LICENSE](LICENSE)
+## License
 
+
+
+GPL-3.0 - see [LICENSE](LICENSE)
