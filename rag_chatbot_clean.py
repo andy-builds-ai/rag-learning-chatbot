@@ -1,6 +1,6 @@
 """
 RAG Learning Chatbot - Local AI-powered Q&A system for AI Engineering study.
-Uses Ollama (Llama 3.2) + LangChain + FAISS for retrieval-augmented generation.
+Uses Ollama (Gemma3:4b) + LangChain + FAISS for retrieval-augmented generation.
 Knowledge base stored as text files in the 'wissen/' directory.
 """
 
