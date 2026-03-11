@@ -42,7 +42,7 @@ User Question → FAISS Retriever (k=6) → Context + Prompt → Ollama LLM → 
 
 - Ollama + Gemma3 4B (local LLM)
 
-- Ollama + nomic-embed-text (local embeddings)
+- Ollama + nomic-embed-text-v2-moe (multilingual embeddings, ~100 languages)
 
 - LangChain (document loading, text splitting, retrieval)
 
@@ -56,7 +56,7 @@ User Question → FAISS Retriever (k=6) → Context + Prompt → Ollama LLM → 
 
 1. Install Ollama: https://ollama.com
 
-2. Pull the models: `ollama pull gemma3:4b` and `ollama pull nomic-embed-text`
+2. Pull the models: `ollama pull gemma3:4b` and `ollama pull nomic-embed-text-v2-moe`
 
 3. Install dependencies: `pip install -r requirements.txt`
 
