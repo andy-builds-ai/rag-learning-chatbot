@@ -24,7 +24,7 @@ Local AI-powered Q&A chatbot for studying AI Engineering. Uses Retrieval-Augment
 
 - Source attribution for every answer
 
-
+- **Web interface** via Gradio (`python gradio_app.py` → open localhost:7860)
 
 ## Architecture
 
@@ -71,6 +71,17 @@ User Question → FAISS Retriever (k=6) → Context + Prompt → Ollama LLM → 
 1. Add `.txt` files to the `wissen/` folder
 
 2. Run the chatbot and type `neues wissen` to rebuild the index
+
+
+
+## Web Interface
+
+```bash
+python gradio_app.py
+```
+
+Opens a browser-based chat UI at `http://localhost:7860`.
+Requires Ollama running and FAISS index built.
 
 
 
