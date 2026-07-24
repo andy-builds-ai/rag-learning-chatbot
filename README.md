@@ -2,6 +2,8 @@
 
 Local AI-powered Q&A chatbot for studying AI Engineering. Uses Retrieval-Augmented Generation (RAG) to answer questions based on your own knowledge base.
 
+![RAG chatbot web UI answering a question with source attribution](docs/gradio-chat.png)
+
 ## Features
 
 - Local LLM via Ollama (Gemma3 4B) - no API costs, full privacy
